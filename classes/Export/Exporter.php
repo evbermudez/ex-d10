@@ -59,7 +59,7 @@ class Exporter {
         // return the right data format
         switch($format) {
             case 'xml':
-                header('Content-type: text/xml');
+
                 
                 // fix any keys starting with numbers
                 $keyMap = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
