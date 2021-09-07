@@ -8,6 +8,10 @@ class PlayerStats extends Model
      */
     protected static $tableName = 'player_totals';
 
+    /**
+     * @param array|null $filters
+     * @return array|false
+     */
     public static function getPlayersStats(array $filters = null) {
         $players = sprintf('`%s`', Player::getTableName());
         $playerTotals = sprintf('`%s`', self::getTableName());

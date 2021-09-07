@@ -12,6 +12,10 @@ class Player extends Model
      */
     protected static $tableName = 'roster';
 
+    /**
+     * @param array $filters
+     * @return \Tightenco\Collect\Support\Collection
+     */
     public static function getPlayers(array $filters = []) {
         $players = sprintf('`%s`', self::getTableName());
 
