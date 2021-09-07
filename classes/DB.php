@@ -22,7 +22,6 @@ class DB
 
             try {
                 self::$dbHandler = new PDO($dsn, Config::DB_USERNAME, Config::DB_PASSWORD, [
-                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT
                 ]);
             } catch (PDOException $e) {
