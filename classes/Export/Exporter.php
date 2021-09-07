@@ -55,7 +55,7 @@ class Exporter {
     }
 
     public function format($data, $format = 'html') {
-        
+        $data = collect($data);
         // return the right data format
         switch($format) {
             case 'xml':
