@@ -11,15 +11,13 @@
  */
 
  use Illuminate\Support;
-
-// prepare the request & process the arguments
-$database = 'nba2019';
-include('include/utils.php');
+ include('classes/DB.php');
 require_once('vendor/autoload.php');
 require_once('classes/Controller.php');
 
 // process the args
 $args = collect($_REQUEST);
+
 $format = $args->pull('format') ?: 'html';
 $type = $args->pull('type');
 if (!$type) {
